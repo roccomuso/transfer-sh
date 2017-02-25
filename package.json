@@ -1,0 +1,34 @@
+{
+  "name": "transfer-sh",
+  "version": "1.0.0",
+  "description": "Node.js wrapper for easy CLI file sharing using Transfer.sh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roccomuso/transfer-sh.git"
+  },
+  "keywords": [
+    "transfer",
+    "transfer.sh",
+    "wrapper",
+    "cli",
+    "upload",
+    "file",
+    "sharing"
+  ],
+  "author": "Rocco Musolino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roccomuso/transfer-sh/issues"
+  },
+  "homepage": "https://github.com/roccomuso/transfer-sh#readme",
+  "dependencies": {
+    "concat-stream": "^1.6.0",
+    "copy-paste": "^1.3.0",
+    "got": "^6.7.1",
+    "pump": "^1.0.2"
+  }
+}
