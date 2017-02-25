@@ -1,7 +1,7 @@
 {
   "name": "transfer-sh",
   "version": "1.0.0",
-  "description": "Node.js wrapper for easy CLI file sharing using Transfer.sh",
+  "description": "Node.js CLI tool for easy file sharing using Transfer.sh",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
