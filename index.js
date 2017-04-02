@@ -4,7 +4,7 @@ var got = require('got')
 var concat = require('concat-stream')
 var pump = require('pump')
 
-var domain = 'transfer.sh'
+var domain = 'https://transfer.sh'
 var options = {}
 
 module.exports = function (fileInput) {
