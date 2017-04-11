@@ -56,10 +56,15 @@ or the `openssl` util:
 openssl param explanation:
 
 `-d` decrypt.
+
 `-a` to decode base64 (with line break). NB. The file is base64 encoded to be easy human-readable and to allow easy copy-paste.
+
 `-nosalt` The used node crypto lib by default doesn't apply any salt.
+
 `-in` input encrypted file.
+
 `-out` output decrypted file.
+
 `-k` password.
 
 ## Author
