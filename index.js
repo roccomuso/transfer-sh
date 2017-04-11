@@ -13,7 +13,7 @@ var PassThroughStream = require('stream').PassThrough
 
 var domain = 'https://transfer.sh'
 
-function Transfer(fileInput, opts) {
+function Transfer (fileInput, opts) {
   if (!fileInput) throw Error('File input required')
   var algorithm = 'aes-256-cbc'
   this.fileInput = fileInput
@@ -40,19 +40,19 @@ Transfer.prototype._crypt = function () {
   this.encryptedStream = this.inputStream.pipe(this.sEncrypt)
    .pipe(base64.encode())
    .pipe(block({size: 76, zeroPadding: false}))
-   .pipe(through2(function(chunk, enc, next){
+   .pipe(through2(function (chunk, enc, next) {
      this.push(chunk + os.EOL) // new line every 76 chars
      next()
-    }))
+   }))
 }
 
 Transfer.prototype.decrypt = function (destination) {
   if (!destination) throw Error('destination required for the decrypt method')
   var self = this
-  return new Promise(function(resolve, reject){
+  return new Promise(function (resolve, reject) {
     var wStream = fs.createWriteStream(destination)
-    eos(wStream, function(err) {
-      if (err) return reject('stream had an error or closed early');
+    eos(wStream, function (err) {
+      if (err) return reject('stream had an error or closed early')
       resolve(this)
     })
     /* start decrypt */

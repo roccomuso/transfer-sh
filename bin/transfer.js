@@ -6,12 +6,12 @@ var Transfer = require('../index')
 
 console.log(argv)
 
-if (argv.d){ /* Decrypt */
+if (argv.d) { /* Decrypt */
   if (!argv.p) catchError('No password provided')
   var output = argv.o || 'output.md'
   new Transfer(argv.d, {password: argv.p})
   .decrypt(output)
-  .then(function(){
+  .then(function () {
     console.log('Successfully decrypted in', output)
   })
   .catch(catchError)
