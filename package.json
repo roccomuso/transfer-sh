@@ -1,6 +1,6 @@
 {
   "name": "transfer-sh",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Node.js CLI tool for easy file sharing using Transfer.sh",
   "main": "index.js",
   "preferGlobal": true,
