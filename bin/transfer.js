@@ -4,8 +4,6 @@ var argv = require('minimist')(process.argv.slice(1))
 var ncp = require('copy-paste')
 var Transfer = require('../index')
 
-console.log(argv)
-
 if (argv.d) { /* Decrypt */
   if (!argv.p) catchError('No password provided')
   var output = argv.o || 'output.md'
