@@ -28,14 +28,14 @@ Encrypt a file using a password:
 var Transfer = require('transfer-sh')
 
 /* Encrypt and Upload */
-var t = new Transfer('./Hello.md', {password: 's3cr3t'})
-t.upload()
- .then(function (link) { console.log(link) })
- .catch(function (err) { console.log(err) })
+new Transfer('./Hello.md', {password: 's3cr3t'})
+  .upload()
+  .then(function (link) { console.log(link) })
+  .catch(function (err) { console.log(err) })
 
 /* Decrypt */
- var t2 = new Transfer('./Hello.enc', {password: 's3cr3t'})
- t2.decrypt('Output.md')
+new Transfer('./Hello.enc', {password: 's3cr3t'})
+  .decrypt('Output.md')
   .then(function (wStream) { console.log('Decrypted!') }) // it returns a writableStream
   .catch(function (err) { console.log(err) })
 
