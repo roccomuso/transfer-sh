@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var argv = require('minimist')(process.argv.slice(1))
-var ncp = require('copy-paste')
+var clipboardy = require('clipboardy')
 var Transfer = require('../index')
 
 if (argv.d) { /* Decrypt */
@@ -22,11 +22,9 @@ if (argv.d) { /* Decrypt */
 
 function gotUrl (url) {
   console.log(' ' + url)
-  ncp.copy(url, function (err) {
-    catchError(err)
+  clipboardy.write(url).then(function () {
     console.log(' \u2713 Link copied to clipboard\n')
-    process.exit(0) // HACK see: node-copy-paste/issues/32
-  })
+  }).catch(catchError)
 }
 
 function catchError (err) {
