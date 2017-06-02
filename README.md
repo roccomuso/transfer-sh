@@ -1,4 +1,4 @@
-# transfer-sh [![NPM Version](https://img.shields.io/npm/v/transfer-sh.svg)](https://www.npmjs.com/package/transfer-sh) [![bitHound Overall Score](https://www.bithound.io/github/roccomuso/transfer-sh/badges/score.svg)](https://www.bithound.io/github/roccomuso/transfer-sh) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+# transfer-sh [![NPM Version](https://img.shields.io/npm/v/transfer-sh.svg)](https://www.npmjs.com/package/transfer-sh) [![bitHound Overall Score](https://www.bithound.io/github/roccomuso/transfer-sh/badges/score.svg)](https://www.bithound.io/github/roccomuso/transfer-sh) [![Dependency Status](https://david-dm.org/roccomuso/transfer-sh.png)](https://david-dm.org/roccomuso/transfer-sh) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Node.js CLI tool for easy file sharing using Transfer.sh
 
