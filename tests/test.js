@@ -5,7 +5,7 @@ var test = require('tape')
 
 test('File transfer', function (t) {
   t.plan(3)
-  let testFile = fs.readFileSync('./package.json')
+  var testFile = fs.readFileSync('./package.json')
   new Transfer('./package.json').upload().then(function (url) {
     console.log('Uploaded done, url:', url)
     t.equal(typeof url, 'string', 'Returned url is a string')
