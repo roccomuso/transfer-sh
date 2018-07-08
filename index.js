@@ -52,7 +52,7 @@ Transfer.prototype.decrypt = function (destination) {
   return new Promise(function (resolve, reject) {
     var wStream = fs.createWriteStream(destination)
     eos(wStream, function (err) {
-      if (err) return reject('stream had an error or closed early')
+      if (err) return reject(new Error('stream had an error or closed early'))
       resolve(this)
     })
     /* start decrypt */
