@@ -1,14 +1,17 @@
 #!/usr/bin/env node
+var clipboardy = require('clipboardy')
+var Transfer = require('../index')
 
 var argv = require('minimist')(process.argv.slice(1), {
   alias: {
     'version': 'v'
   }
 })
-var clipboardy = require('clipboardy')
-var Transfer = require('../index')
 
-if (argv.v) return console.log('v' + require('../package.json').version)
+if (argv.v) {
+  console.log('v' + require('../package.json').version)
+  process.exit(0)
+}
 
 if (argv.d) { /* Decrypt */
   if (!argv.p) catchError('No password provided')
