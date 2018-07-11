@@ -17,16 +17,16 @@ if (argv.d) { /* Decrypt */
   if (!argv.p) catchError('No password provided')
   var output = argv.o || 'output.md'
   new Transfer(argv.d, {password: argv.p})
-  .decrypt(output)
-  .then(function () {
-    console.log('Successfully decrypted in', output)
-  })
-  .catch(catchError)
+    .decrypt(output)
+    .then(function () {
+      console.log('Successfully decrypted in', output)
+    })
+    .catch(catchError)
 } else { /* Possibly Encrypt and Upload */
   new Transfer(argv._[1], {password: argv.p})
-  .upload()
-  .then(gotUrl)
-  .catch(catchError)
+    .upload()
+    .then(gotUrl)
+    .catch(catchError)
 }
 
 function gotUrl (url) {
