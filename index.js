@@ -30,20 +30,20 @@ Transfer.prototype.upload = function () {
   if (this.opts.password) this._crypt()
   return new Promise(function (resolve, reject) {
     pump(self.encryptedStream || self.inputStream,
-         got.stream.put(domain + '/' + path.basename(self.fileInput), self.httpOptions),
-         concat(function (link) { resolve(link.toString()) }),
-         reject)
+      got.stream.put(domain + '/' + path.basename(self.fileInput), self.httpOptions),
+      concat(function (link) { resolve(link.toString()) }),
+      reject)
   })
 }
 
 Transfer.prototype._crypt = function () {
   this.encryptedStream = this.inputStream.pipe(this.sEncrypt)
-   .pipe(base64.encode())
-   .pipe(block({size: 76, zeroPadding: false}))
-   .pipe(through2(function (chunk, enc, next) {
-     this.push(chunk + os.EOL) // new line every 76 chars
-     next()
-   }))
+    .pipe(base64.encode())
+    .pipe(block({size: 76, zeroPadding: false}))
+    .pipe(through2(function (chunk, enc, next) {
+      this.push(chunk + os.EOL) // new line every 76 chars
+      next()
+    }))
 }
 
 Transfer.prototype.decrypt = function (destination) {
@@ -57,8 +57,8 @@ Transfer.prototype.decrypt = function (destination) {
     })
     /* start decrypt */
     self.inputStream.pipe(base64.decode())
-     .pipe(self.sDecrypt)
-     .pipe(wStream)
+      .pipe(self.sDecrypt)
+      .pipe(wStream)
   })
 }
 
