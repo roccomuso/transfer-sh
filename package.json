@@ -31,6 +31,9 @@
   "bugs": {
     "url": "https://github.com/roccomuso/transfer-sh/issues"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "homepage": "https://github.com/roccomuso/transfer-sh#readme",
   "dependencies": {
     "base64-stream": "^0.1.3",
