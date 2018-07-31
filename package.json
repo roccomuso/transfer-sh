@@ -40,7 +40,7 @@
     "end-of-stream": "^1.4.1",
     "got": "^6.7.1",
     "minimist": "^1.2.0",
-    "pump": "^1.0.2",
+    "pump": "^3.0.0",
     "through2": "^2.0.3"
   },
   "devDependencies": {
