@@ -7,7 +7,7 @@ var pump = require('pump')
 var crypto = require('crypto')
 var through2 = require('through2')
 var base64 = require('base64-stream')
-var block = require('block-stream2')
+var block = require('batched-stream')
 var eos = require('end-of-stream')
 var PassThroughStream = require('stream').PassThrough
 
@@ -39,7 +39,7 @@ Transfer.prototype.upload = function () {
 Transfer.prototype._crypt = function () {
   this.encryptedStream = this.inputStream.pipe(this.sEncrypt)
     .pipe(base64.encode())
-    .pipe(block({size: 76, zeroPadding: false}))
+    .pipe(new block({size: 76, strictMode: false}))
     .pipe(through2(function (chunk, enc, next) {
       this.push(chunk + os.EOL) // new line every 76 chars
       next()

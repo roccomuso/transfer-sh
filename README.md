@@ -51,7 +51,7 @@ or the `openssl` util:
 
     $ openssl aes-256-cbc -d -a -nosalt -in <encrypted_file> -out <destination> -k <password>
 
-openssl param explanation:
+openssl params explanation:
 
 `-d` decrypt.
 
