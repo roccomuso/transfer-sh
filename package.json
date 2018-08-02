@@ -39,6 +39,7 @@
     "concat-stream": "^1.6.2",
     "end-of-stream": "^1.4.1",
     "got": "^6.7.1",
+    "is-stream": "^1.1.0",
     "minimist": "^1.2.0",
     "pump": "^3.0.0",
     "through2": "^2.0.3"
