@@ -33,11 +33,13 @@ new Transfer('./Hello.md', {password: 's3cr3t'})
 
 /* Decrypt */
 new Transfer('./Hello.enc', {password: 's3cr3t'})
-  .decrypt('Output.md')
+  .decrypt('Output.md') // or writable stream
   .then(function (wStream) { console.log('Decrypted!') }) // it returns a writableStream
   .catch(function (err) { console.log(err) })
 
 ```
+
+**NB.**: The constructor accepts also a `Readable` stream as 1th param, in that case make sure to provide a `name` option.
 
 ### Options
 
