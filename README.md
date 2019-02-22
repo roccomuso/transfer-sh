@@ -1,6 +1,6 @@
 # transfer-sh [![NPM Version](https://img.shields.io/npm/v/transfer-sh.svg)](https://www.npmjs.com/package/transfer-sh) [![Build Status](https://travis-ci.org/roccomuso/transfer-sh.svg?branch=master)](https://travis-ci.org/roccomuso/transfer-sh) [![Dependency Status](https://david-dm.org/roccomuso/transfer-sh.png)](https://david-dm.org/roccomuso/transfer-sh) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) <span class="badge-patreon"><a href="https://patreon.com/roccomuso" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 
-Node.js CLI tool for easy file sharing using Transfer.sh
+> Node.js CLI tool for easy file sharing using Transfer.sh
 
 ### Install
 
@@ -69,7 +69,7 @@ openssl params explanation:
 
 ## Author
 
-#### Rocco Musolino
+Rocco Musolino ([@roccomuso](https://twitter.com/roccomuso))
 
 ## LICENSE
 
