@@ -32,7 +32,7 @@
     "url": "https://github.com/roccomuso/transfer-sh/issues"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "homepage": "https://github.com/roccomuso/transfer-sh#readme",
   "dependencies": {
