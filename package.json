@@ -41,7 +41,7 @@
     "clipboardy": "^1.2.3",
     "concat-stream": "^2.0.0",
     "end-of-stream": "^1.4.1",
-    "got": "^9.6.0",
+    "got": "^11.8.5",
     "is-stream": "^1.1.0",
     "minimist": "^1.2.0",
     "pump": "^3.0.0",
